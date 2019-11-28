@@ -1,3 +1,3 @@
 # tapeworm
 
-This is the part where I seek a high place and yeet myself off it. nah frfr i am spending too long on this.
+I don't know why I brought this pain upon myself.
