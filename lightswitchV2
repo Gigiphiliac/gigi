@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>lightswitch v2</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.image_position {
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+
+#image_one {
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+
+#image_two {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+}
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">//<![CDATA[
+
+    window.onload=function(){
+      
+var c = document.getElementById("image_div");
+var image_two = document.getElementById("image_two");
+var my_zIndex = -1;
+
+c.onclick = function(){
+	console.log(image_two.style.zIndex)
+  my_zIndex *= -1;
+	image_two.style.zIndex = my_zIndex;
+  
+}
+
+    }
+
+  //]]></script>
+
+</head>
+<body>
+    <div id="image_div" class="image_position">
+  <img src="https://i.imgur.com/YbXeGRx.png" display="block" id="image_one" class="image">
+  <img src="https://i.imgur.com/78GfiQJ.png" display="block" id="image_two"class="image">
+</div>
+
+
+
+
+
+
+<!--
+https://i.imgur.com/YbXeGRx.png on
+https://i.imgur.com/PdL1xux.png graffity
+https://i.imgur.com/78GfiQJ.png off
+-->
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: ""
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+</body>
+</html>
