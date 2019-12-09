@@ -15,11 +15,13 @@ body,
   padding: 0;
 }
 
-#body.duckOne {
+#body.duckOne,
+#forward{
   background-image: url("https://i.imgur.com/otTmUyB.png");
 }
 
-#body.duckTwo {
+#body.duckTwo,
+#forward{
   background-image: url("https://i.imgur.com/uamDXPf.png");
 }
 
