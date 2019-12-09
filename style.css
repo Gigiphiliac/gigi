@@ -1,5 +1,9 @@
 <style id="compiled-css" type="text/css">
 
+#forward {
+  z-index = 1;
+}
+
 html,
 body,
 #body {
